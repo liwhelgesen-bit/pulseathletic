@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,35 +64,82 @@
 </section>
      
 
+
+
 <section class="products">
-    <section class="item">
-        <img src="img/core-green-new.png" alt="Pulse Core Green">
+
+    <article class="item" data-color="green">
+        <img src="img/core-green-new.png"
+             alt="PULSE Core Forest Green">
+
         <section class="product-info">
-
-            <h4>Pulse Core Forest Green</h4>
-            <button id="buy-btn">KØB</button>
-
+            <h4>PULSE Core Forest Green</h4>
+            <p class="price">1.299 kr.</p>
+            <button class="buy-btn">SE PRODUKT</button>
         </section>
-    </section>
-    <section class="item">
-        <img src="img/core-grey-new.png" alt="Pulse Core Grey">
+    </article>
+
+    <article class="item" data-color="grey">
+        <img src="img/core-grey-new.png"
+             alt="PULSE Core Titanium Grey">
+
         <section class="product-info">
-
-            <h4>Pulse Core Steel Gray</h4>
-            <button id="buy-btn">KØB</button>
-
+            <h4>PULSE Core Titanium Grey</h4>
+            <p class="price">1.299 kr.</p>
+            <button class="buy-btn">SE PRODUKT</button>
         </section>
-    </section>
-    <section class="item">
-        <img src="img/core-black-new.png" alt="Pulse Core Charcoal Black">
+    </article>
+
+    <article class="item" data-color="black">
+        <img src="img/core-black-new.png"
+             alt="PULSE Core Graphite Black">
+
         <section class="product-info">
-
-            <h4>Pulse Core Charcoal Black</h4>
-            <button id="buy-btn">KØB</button>
-
+            <h4>PULSE Core Graphite Black</h4>
+            <p class="price">1.299 kr.</p>
+            <button class="buy-btn">SE PRODUKT</button>
         </section>
-    </section>
+    </article>
+
 </section>
+
+<!-- Produkt popup -->
+<div id="productPopup" class="product-popup">
+
+    <div class="product-popup-content">
+
+        <span class="product-close">&times;</span>
+
+        <img id="popupProductImage" src="" alt="PULSE Core">
+
+        <h2 id="popupProductName"></h2>
+
+        <p class="popup-price">1.299 kr.</p>
+
+        <p class="popup-description">
+            PULSE Core er udviklet til dig, der vil træne
+            smartere og forstå din krops udvikling.
+        </p>
+
+        <h3>Nøglefunktioner</h3>
+
+        <ul>
+            <li>Kontinuerlig pulsmåling i realtid</li>
+            <li>Automatisk registrering af træning</li>
+            <li>Måling af kalorier, distance og intensitet</li>
+            <li>Søvnregistrering og restitutionsmåling</li>
+            <li>Op til 10 dages batteritid</li>
+            <li>Bluetooth 5.3 og PULSE App</li>
+            <li>5 ATM vandtæthed</li>
+            <li>Udskiftelige silikoneremme</li>
+        </ul>
+
+        <button id="popupBuyButton">LÆG I KURV</button>
+
+    </div>
+
+</div>
+
 <br>
 <br>
 <br>
@@ -177,5 +224,3 @@
 <script src="js/script.js"></script>
 </body>
 </html>
-
-
