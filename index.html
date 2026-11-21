@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-iccon" href="img/logo-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
 </head>
 
+<body>
+
 <header class="header1">
-    
+
+
     <img class="logo" src="img/pulse-logo.svg" alt="Logo" width="250">
         <section class="icon">
             <button class="hicon">
@@ -38,9 +42,11 @@
 <p id="hero-text">TRAIN SMARTER<br>LIVE STRONGER</p>
 <button id="hero-køb">KØB</button>
 
+
+
+
 </header>
-<body>
-<button class="sticky-button">Er du studerende? Få 20% på din første ordne!</button>
+<button class="sticky-button" id="studentpulse20">Er du studerende? Få 20% på din første ordre!</button>
 <br>
 <section class="features"> 
     <article class="sec-features">
@@ -120,9 +126,9 @@
     <p>© 2026 PULSE Athletics. All rights reserved.</p>  
 
     <section class="social-icons">
-    <img src="img/fb-icon.svg" alt="facebook" width="20">
-    <img src="img/x-icon.svg" alt="instagram" width="20">
-    <img src="img/ig-icon.svg" alt="twitter" width="20">
+    <img src="img/fb-icon.svg" alt="facebook" width="30">
+    <img src="img/x-icon.svg" alt="instagram" width="30">
+    <img src="img/ig-icon.svg" alt="twitter" width="30">
     </section>
   
 <hr>
@@ -136,5 +142,38 @@
 <button class="Footer button">Careers</button>  
 <button class="Footer button">Contact</button>   
 </footer>
+<!-- Student popup -->
+<div id="studentPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span class="close">&times;</span>
+
+        <img src="img/core-green-new.png"
+             alt="Pulse Core Forest Green"
+             class="popup-image">
+
+        <h2>Få 20% studierabat!</h2>
+
+        <p>Er du studerende? Tilmeld dig her og få 20% på din første ordre.</p>
+
+        <form id="studentForm">
+
+            <input
+                type="email"
+                id="studentEmail"
+                placeholder="Din e-mail"
+                required
+            >
+
+            <button type="submit">FÅ MIN RABAT</button>
+
+        </form>
+
+        <p id="discountCode"></p>
+
+    </div>
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -364,4 +364,85 @@ text-orientation: mixed;
 writing-mode: vertical-rl;
 }
 
+/* Popup baggrund */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
 
+/* Popup indhold */
+.popup-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Produktbillede */
+.popup-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Luk knap */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Overskrift */
+.popup-content h2 {
+    color: #37483f;
+    margin-bottom: 10px;
+}
+
+/* Tekst */
+.popup-content p {
+    font-size: 15px;
+}
+
+/* E-mail felt */
+#studentEmail {
+    width: 100%;
+    padding: 12px;
+    margin: 20px 0;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+/* Rabatknap */
+#studentForm button {
+    background-color: #37483f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#studentForm button:hover {
+    background-color: #222;
+}
+
+/* Rabatkode */
+#discountCode {
+    color: #37483f;
+    font-weight: bold;
+    margin-top: 15px;
+}
