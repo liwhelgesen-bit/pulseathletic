@@ -1,57 +1,62 @@
-document.addEventListener("DOMContentLoaded", function() {
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("PULSE JavaScript er indlæst!");
 
     // =====================================
     // STUDENT POPUP
     // =====================================
 
-    // Find HTML-elementerne
     const studentBtn = document.getElementById("studentpulse20");
     const studentPopup = document.getElementById("studentPopup");
     const closeBtn = document.querySelector(".close");
     const studentForm = document.getElementById("studentForm");
     const discountCode = document.getElementById("discountCode");
 
-    // Åbn student popup
-    studentBtn.addEventListener("click", function() {
-        studentPopup.style.display = "block";
-    });
+    if (studentBtn && studentPopup) {
+        studentBtn.addEventListener("click", function () {
+            studentPopup.style.display = "block";
+        });
+    }
 
-    // Luk student popup
-    closeBtn.addEventListener("click", function() {
-        studentPopup.style.display = "none";
-    });
-
-    // Luk student popup ved klik udenfor
-    window.addEventListener("click", function(event) {
-        if (event.target === studentPopup) {
+    if (closeBtn && studentPopup) {
+        closeBtn.addEventListener("click", function () {
             studentPopup.style.display = "none";
-        }
-    });
+        });
+    }
 
-    // Når kunden tilmelder sig
-    studentForm.addEventListener("submit", function(event) {
-        event.preventDefault();
+    if (studentPopup) {
+        window.addEventListener("click", function (event) {
+            if (event.target === studentPopup) {
+                studentPopup.style.display = "none";
+            }
+        });
+    }
 
-        discountCode.innerHTML =
-            "Tillykke! Din rabatkode er: studentpulse20 🎉";
+    if (studentForm) {
+        studentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        studentForm.reset();
-    });
+            discountCode.textContent =
+                "Tillykke! Din rabatkode er: studentpulse20 🎉";
+
+            studentForm.reset();
+        });
+    }
 
 
     // =====================================
     // PRODUKT POPUP
     // =====================================
 
-    // Find HTML-elementerne
     const productItems = document.querySelectorAll(".item");
     const productPopup = document.getElementById("productPopup");
     const closeProduct = document.querySelector(".product-close");
+
     const popupImage = document.getElementById("popupProductImage");
     const popupName = document.getElementById("popupProductName");
     const popupBuyButton = document.getElementById("popupBuyButton");
 
-    // Produktinformation
     const products = {
         green: {
             name: "PULSE Core Forest Green",
@@ -69,12 +74,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    // Åbn produkt popup ved klik på produkt
-    productItems.forEach(function(item) {
-        item.addEventListener("click", function() {
+    productItems.forEach(function (item) {
+
+        item.addEventListener("click", function () {
 
             const color = item.dataset.color;
             const product = products[color];
+
+            if (!product) return;
 
             popupName.textContent = product.name;
             popupImage.src = product.image;
@@ -84,26 +91,45 @@ document.addEventListener("DOMContentLoaded", function() {
 
             productPopup.style.display = "block";
         });
+
     });
 
-    // Luk produkt popup med kryds
-    closeProduct.addEventListener("click", function() {
-        productPopup.style.display = "none";
-    });
 
-    // Luk produkt popup ved klik udenfor
-    productPopup.addEventListener("click", function(event) {
-        if (event.target === productPopup) {
+    // Luk produkt popup
+
+    if (closeProduct) {
+        closeProduct.addEventListener("click", function () {
             productPopup.style.display = "none";
-        }
-    });
+        });
+    }
 
-    // Luk produkt popup med Escape
-    document.addEventListener("keydown", function(event) {
+    if (productPopup) {
+        productPopup.addEventListener("click", function (event) {
+            if (event.target === productPopup) {
+                productPopup.style.display = "none";
+            }
+        });
+    }
+
+
+    // =====================================
+    // ESCAPE TAST
+    // =====================================
+
+    document.addEventListener("keydown", function (event) {
+
         if (event.key === "Escape") {
-            productPopup.style.display = "none";
-            studentPopup.style.display = "none";
+
+            if (productPopup) {
+                productPopup.style.display = "none";
+            }
+
+            if (studentPopup) {
+                studentPopup.style.display = "none";
+            }
+
         }
+
     });
 
 
@@ -115,15 +141,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const cartButton = document.querySelector(".hicon");
 
-    // Læg produkt i kurv
-    popupBuyButton.addEventListener("click", function() {
+    if (popupBuyButton) {
 
-        cartCount++;
+        popupBuyButton.addEventListener("click", function () {
 
-        cartButton.title = "Indkøbskurv: " + cartCount + " produkter";
+            cartCount++;
 
-        popupBuyButton.textContent = "TILFØJET TIL KURV ✓";
+            if (cartButton) {
+                cartButton.title =
+                    "Indkøbskurv: " + cartCount + " produkter";
+            }
 
-    });
+            popupBuyButton.textContent = "TILFØJET TIL KURV ✓";
+
+        });
+
+    }
 
 });
