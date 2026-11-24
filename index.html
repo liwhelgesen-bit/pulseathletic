@@ -161,42 +161,64 @@
         <button id="readmore">KØB NU -></button>
         <img id="app-mockup" src="img/app-mockup.png" alt="app-mockup" height="800" width="402">
     </article>
-    
-    
-</section>
 
-<hr>
-<section class="Newsletter">    
+        </article>
 
+<!-- NYHEDSBREV -->
+<section class="Newsletter">
     <h3>TILMELD DIG NYHEDER!</h3>
-<input id="nyheder" type="password" placeholder="din@mail.com">
-<button id="tilmeld">></button>
-<p id="underbud">Nye medlemmer får gratis fragt</p>
+    <p>Få de seneste nyheder fra PULSE Athletics.</p>
 
+    <form id="newsletter-form">
+        <input id="nyheder" type="email" placeholder="din@mail.com" required>
+        <button id="tilmeld" type="submit">Tilmeld</button>
+    </form>
+
+    <p id="underbud">Nye medlemmer får gratis fragt</p>
+    <p id="newsletter-message" aria-live="polite"></p>
 </section>
 
+<!-- FOOTER -->
+<footer id="footer">
+    ...
+</footer>
 
 
 <footer id="footer">
-    <p>© 2026 PULSE Athletics. All rights reserved.</p>  
 
-    <section class="social-icons">
-    <img src="img/fb-icon.svg" alt="facebook" width="30">
-    <img src="img/x-icon.svg" alt="instagram" width="30">
-    <img src="img/ig-icon.svg" alt="twitter" width="30">
-    </section>
-  
-<hr>
-<button class="Footer button">Home</button>
-<button class="Footer button">FAQ</button>  
-<button class="Footer button">About</button>  
-<button class="Footer button">Privacy Policy</button>  
+    <div class="footer-top">
+        <p>© 2026 PULSE Athletics. All rights reserved.</p>
 
-<button class="Footer button">Terms of Service</button>  
-<button class="Footer button">Security</button>  
-<button class="Footer button">Careers</button>  
-<button class="Footer button">Contact</button>   
+        <section class="social-icons">
+            <a href="#" aria-label="Facebook">
+                <img src="img/fb-icon.svg"
+                     alt="Facebook" width="30">
+            </a>
+
+            <a href="#" aria-label="Instagram">
+                <img src="img/ig-icon.svg"
+                     alt="Instagram" width="30">
+            </a>
+        </section>
+    </div>
+
+    <hr>
+
+    <nav class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">FAQ</a>
+        <a href="#">About</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Security</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <p class="footer-slogan">EVERY BEAT COUNTS.</p>
+
 </footer>
+
 <!-- Student popup -->
 <div id="studentPopup" class="popup">
 

@@ -1,4 +1,4 @@
-
+"use strict";
 document.addEventListener("DOMContentLoaded", function () {
 
     console.log("PULSE JavaScript er indlæst!");
@@ -157,5 +157,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
+
+});
+
+// NYHEDSBREV
+
+const newsletterForm = document.querySelector("#newsletter-form");
+const newsletterMessage = document.querySelector("#newsletter-message");
+
+newsletterForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    newsletterMessage.textContent =
+        "Tak for din tilmelding til PULSE Athletics!";
+
+    newsletterForm.reset();
 
 });
