@@ -160,18 +160,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+// =====================================
 // NYHEDSBREV
+// =====================================
 
 const newsletterForm = document.querySelector("#newsletter-form");
 const newsletterMessage = document.querySelector("#newsletter-message");
 
-newsletterForm.addEventListener("submit", function(event) {
+if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function(event) {
 
-    event.preventDefault();
+        event.preventDefault();
 
-    newsletterMessage.textContent =
-        "Tak for din tilmelding til PULSE Athletics!";
+        newsletterMessage.textContent =
+            "Tak for din tilmelding til PULSE Athletics!";
 
-    newsletterForm.reset();
+        newsletterForm.reset();
 
-});
+    });
+}

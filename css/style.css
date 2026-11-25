@@ -304,72 +304,19 @@ navbar input[type=text] {
 ================================= */
 
 .app-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    padding: 20px 30px;
     margin-bottom: 50px;
 }
 
-.app-sec {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: left;
-}
-
-.cycle-pic {
-    height: 100%;
+.app-section img {
+    display: block;
     width: 100%;
+    max-width: 1400px;
+    height: auto;
     margin: auto;
     border-radius: 8px;
-    display: flex;
-    object-fit: cover;
 }
-
-.cycle-pic img {
-    height: 100%;
-    width: 100%;
-    object-fit: none;
-}
-
-#readmore {
-    position: absolute;
-    left: 70px;
-    bottom: 150px;
-    z-index: 1;
-    padding: 12px 20px;
-    border: none;
-    background-color: var(--pulse-color);
-    color: white;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-#readmore:hover {
-    background-color: var(--pulse-hover);
-}
-
-#cycle-text {
-    position: absolute;
-    padding-right: 200px;
-    left: 70px;
-    bottom: 305px;
-    z-index: 1;
-    margin: 0;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-#app-mockup {
-    position: absolute;
-    margin-left: 830px;
-    margin-top: 40px;
-    filter: drop-shadow(10px 10px 10px black);
-}
-
 
 /* =================================
    NYHEDSBREV
