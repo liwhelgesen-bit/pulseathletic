@@ -175,25 +175,97 @@ navbar input[type=text] {
 
 
 /* =================================
-   FEATURES
+   KERNEVÆRDIER / FEATURES
 ================================= */
 
 .features {
-    width: 100%;
-    padding: 20px 30px;
-    margin-bottom: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    margin-bottom: 50px;
 }
 
-.features img {
-    display: block;
+.feature-card {
+    position: relative;
+    width: 33.33%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.feature-card img {
     width: 100%;
-    max-width: 1400px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* Mørk overgang bag teksten */
+.feature-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 75, 82, 0.95)
+    );
+}
+
+/* Tekst oven på billederne */
+.feature-text {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 20px;
+    z-index: 2;
+    color: white;
+    font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+.feature-text h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature-text p {
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+/* =================================
+   FEATURES MOBIL
+================================= */
+
+@media screen and (max-width: 700px) {
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        width: 100%;
+        height: 450px;
+    }
+
+    .feature-text {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .feature-text h2 {
+        font-size: 20px;
+    }
+
+    .feature-text p {
+        font-size: 17px;
+    }
 }
 
 /* =================================
